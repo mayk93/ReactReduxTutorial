@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d4f455d-ebf0-4de7-b657-6bf74a602c97" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/search_bar.js" afterPath="$PROJECT_DIR$/src/components/search_bar.js" />
-    </list>
+    <list default="true" id="9d4f455d-ebf0-4de7-b657-6bf74a602c97" name="Default" comment="" />
     <ignored path="ReactReduxTutorial.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -536,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1460314648337</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="React Tutorial - Made search bar into a controlled component.">
+      <created>1460316088601</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1460316088601</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -571,7 +575,8 @@
     <MESSAGE value="Working simple example." />
     <MESSAGE value="React Tutorial - Project setup and simple search bar." />
     <MESSAGE value="React Tutorial - Refactor search as class." />
-    <option name="LAST_COMMIT_MESSAGE" value="React Tutorial - Refactor search as class." />
+    <MESSAGE value="React Tutorial - Made search bar into a controlled component." />
+    <option name="LAST_COMMIT_MESSAGE" value="React Tutorial - Made search bar into a controlled component." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
