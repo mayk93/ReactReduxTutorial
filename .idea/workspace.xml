@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d4f455d-ebf0-4de7-b657-6bf74a602c97" name="Default" comment="" />
+    <list default="true" id="9d4f455d-ebf0-4de7-b657-6bf74a602c97" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/other/other_info.js" afterPath="$PROJECT_DIR$/src/other/other_info.js" />
+    </list>
     <ignored path="ReactReduxTutorial.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -22,14 +25,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="630">
+              <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#44#70#0" expanded="true" />
+                <element signature="e#53#79#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,7 +98,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="other_info.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="other_info.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/other/other_info.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -148,8 +151,8 @@
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/other_info.js" />
         <option value="$PROJECT_DIR$/src/components/search_bar.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/other/other_info.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
       </list>
     </option>
   </component>
@@ -590,7 +593,7 @@
           <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#44#70#0" expanded="true" />
+            <element signature="e#53#79#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -723,22 +726,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#44#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/other/other_info.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="68" selection-start-line="0" selection-start-column="68" selection-end-line="0" selection-end-column="68" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#53#79#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
