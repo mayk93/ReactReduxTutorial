@@ -11,6 +11,9 @@ module.exports = {
     loaders: [{
       exclude: /node_modules/,
       loader: 'babel'
+    }, {
+      test: /\.json$/,
+      loader: 'json-loader'
     }]
   },
   resolve: {
@@ -19,5 +22,10 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     contentBase: './'
+  },
+  node: {
+    fs: "empty",
+    net: "empty",
+    tls: "empty"
   }
 };

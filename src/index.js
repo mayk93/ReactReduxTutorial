@@ -3,11 +3,12 @@
  */
 
 // React
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 // Other Libs
 import YTSearch from 'youtube-api-search';
+import getIP from 'external-ip';
 
 // Components
 import SearchBar from './components/search_bar';
@@ -32,18 +33,48 @@ const YT_API_KEY = API_KEYS.YT_KEY;
 // Insert created HTML into DOM.
 
 // Test Search API
-YTSearch({'key': YT_API_KEY, 'term': 'Marilyn Manson'}, function (data) {
-    console.log(YT_API_KEY)
-    console.log(data);
-});
+    // YTSearch({'key': YT_API_KEY, 'term': 'Marilyn Manson'}, function (data) {
+    //     console.log(YT_API_KEY)
+    //     console.log(data);
+    // });
 // -----
 
-const App = () => {
-    return (
-        <div>
-            <SearchBar />
-        </div>
-    );
-};
+// Old, functional App component. Refactored as Class component.
+    // const App = () => {
+    //     return (
+    //         <div>
+    //             <SearchBar />
+    //         </div>
+    //     );
+    // };
+
+var public_ip;
+getIP(function (err, ip) {
+    if (err) {
+        // every service in the list has failed
+        throw err;
+    }
+    console.log(ip);
+});
+
+class App extends Component {
+    constructor (props) {
+        super(props);
+        this.state = { 'videos': [] };
+
+        YTSearch({'key': YT_API_KEY, 'term': ''}, function (data) {
+            this.setState({'videos': data});
+        });
+    }
+
+    render ()  {
+        return (
+            <div>
+                <p>{ public_ip }</p>
+                <SearchBar />
+            </div>
+        );
+    }
+}
 
 ReactDOM.render(<App />, document.querySelector('.container'));
