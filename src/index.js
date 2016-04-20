@@ -8,7 +8,7 @@ import ReactDOM from 'react-dom';
 
 // Other Libs
 import YTSearch from 'youtube-api-search';
-import getIP from 'external-ip';
+import ip from 'ip';
 
 // Components
 import SearchBar from './components/search_bar';
@@ -48,29 +48,22 @@ const YT_API_KEY = API_KEYS.YT_KEY;
     //     );
     // };
 
-var public_ip;
-getIP(function (err, ip) {
-    if (err) {
-        // every service in the list has failed
-        throw err;
-    }
-    console.log(ip);
-});
+const public_ip = ip.address();
 
 class App extends Component {
     constructor (props) {
         super(props);
         this.state = { 'videos': [] };
 
-        YTSearch({'key': YT_API_KEY, 'term': ''}, function (data) {
-            this.setState({'videos': data});
+        YTSearch({'key': YT_API_KEY, 'term': public_ip}, (videos) => {
+            this.setState({ videos });
         });
     }
 
     render ()  {
         return (
             <div>
-                <p>{ public_ip }</p>
+                <p>This should be public IP: { public_ip }</p>
                 <SearchBar />
             </div>
         );
