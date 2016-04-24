@@ -85,11 +85,16 @@ class App extends Component {
             selectedVideo: null
         };
 
-        YTSearch({'key': YT_API_KEY, 'term': location}, (videos) => {
+        this.videoSearch(location);
+    }
+
+    videoSearch (term) {
+        YTSearch({'key': YT_API_KEY, 'term': term}, (videos) => {
             this.setState({
                 videos: videos,
                 selectedVideo: videos[0]
             });
+            // console.log("[VS] Searching.")
         });
     }
 
@@ -97,7 +102,7 @@ class App extends Component {
         return (
             <div>
                 <p>Location: { location }</p>
-                <SearchBar />
+                <SearchBar onSearchTermChange={term => this.videoSearch(term)}/>
                 <VideoDetail video={this.state.selectedVideo} />
                 <VideoList
                     onVideoSelect={selectedVideo => this.setState({selectedVideo})}
