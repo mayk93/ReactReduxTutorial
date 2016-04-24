@@ -2,13 +2,14 @@
  * Created by Michael on 08/04/16.
  */
 
+
 // React
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 // Other Libs
 import YTSearch from 'youtube-api-search';
-import ip from 'ip';
+import $ from "jquery";
 
 // Components
 import SearchBar from './components/search_bar';
@@ -50,7 +51,13 @@ const YT_API_KEY = API_KEYS.YT_KEY;
     //     );
     // };
 
-const public_ip = ip.address();
+
+var location = 'World';
+$.getJSON('//ip-api.com/json?callback=?', function(data) {
+    location = data.country;
+    ReactDOM.render(<App />, document.querySelector('.container'));
+});
+
 
 class App extends Component {
     constructor (props) {
@@ -60,7 +67,7 @@ class App extends Component {
             selectedVideo: null
         };
 
-        YTSearch({'key': YT_API_KEY, 'term': public_ip}, (videos) => {
+        YTSearch({'key': YT_API_KEY, 'term': location}, (videos) => {
             this.setState({
                 videos: videos,
                 selectedVideo: videos[0]
@@ -71,7 +78,7 @@ class App extends Component {
     render ()  {
         return (
             <div>
-                <p>This should be public IP: { public_ip }</p>
+                <p>Location: { location }</p>
                 <SearchBar />
                 <VideoDetail video={this.state.selectedVideo} />
                 <VideoList
@@ -81,5 +88,3 @@ class App extends Component {
         );
     }
 }
-
-ReactDOM.render(<App />, document.querySelector('.container'));
