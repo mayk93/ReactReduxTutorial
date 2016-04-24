@@ -6,6 +6,10 @@ import React from 'react';
 
 
 const VideoDetail = (props) => {
+    if (!props.video) {
+        return <div>Loading ...</div>
+    }
+    
     const video = props.video;
     const title = video.snippet.title;
     const description = video.snippet.description;

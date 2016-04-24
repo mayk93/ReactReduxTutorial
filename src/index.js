@@ -13,6 +13,7 @@ import ip from 'ip';
 // Components
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
+import VideoDetail from './components/video_detail';
 
 // Other Imports
 import API_KEYS from './other/other_info';
@@ -66,6 +67,7 @@ class App extends Component {
             <div>
                 <p>This should be public IP: { public_ip }</p>
                 <SearchBar />
+                <VideoDetail video={this.state.videos[0]} />
                 <VideoList videos={this.state.videos} />
             </div>
         );
