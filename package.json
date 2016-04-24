@@ -30,7 +30,6 @@
     "babel-preset-stage-1": "^6.1.18",
     "exports-loader": "^0.6.3",
     "imports-loader": "^0.6.5",
-    "ipify": "^1.1.0",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",

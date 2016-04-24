@@ -9,7 +9,7 @@ import ReactDOM from 'react-dom';
 
 // Other Libs
 import YTSearch from 'youtube-api-search';
-import $ from "jquery";
+import $ from 'jquery';
 
 // Components
 import SearchBar from './components/search_bar';
@@ -52,12 +52,30 @@ const YT_API_KEY = API_KEYS.YT_KEY;
     // };
 
 
+// Location search using JQuery
 var location = 'World';
 $.getJSON('//ip-api.com/json?callback=?', function(data) {
     location = data.country;
     ReactDOM.render(<App />, document.querySelector('.container'));
 });
 
+// Fetch version 0 -- Not working. Reverting to JQuery.
+    // fetch('http://ip-api.com/json')
+    //   .then(function(response) {
+    //     return response.json()
+    //   }).then(function(json) {
+    //     const location = json.country;
+    //     console.log('Got location: ', location);
+    //     return location;
+    //     // ReactDOM.render(<App />, document.querySelector('.container'));
+    //   }).catch(function(ex) {
+    //     console.log('No location fetched. Defaulting to World. ', ex)
+    //     const location = 'World';
+    //     return location;
+    //     // ReactDOM.render(<App />, document.querySelector('.container'));
+    //   }).then(function (location) {
+    //     ReactDOM.render(<App />, document.querySelector('.container'));
+    // });
 
 class App extends Component {
     constructor (props) {
