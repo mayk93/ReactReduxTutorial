@@ -55,10 +55,16 @@ const public_ip = ip.address();
 class App extends Component {
     constructor (props) {
         super(props);
-        this.state = { 'videos': [] };
+        this.state = {
+            videos: [],
+            selectedVideo: null
+        };
 
         YTSearch({'key': YT_API_KEY, 'term': public_ip}, (videos) => {
-            this.setState({ videos });
+            this.setState({
+                videos: videos,
+                selectedVideo: videos[0]
+            });
         });
     }
 
@@ -67,8 +73,10 @@ class App extends Component {
             <div>
                 <p>This should be public IP: { public_ip }</p>
                 <SearchBar />
-                <VideoDetail video={this.state.videos[0]} />
-                <VideoList videos={this.state.videos} />
+                <VideoDetail video={this.state.selectedVideo} />
+                <VideoList
+                    onVideoSelect={selectedVideo => this.setState({selectedVideo})}
+                    videos={this.state.videos} />
             </div>
         );
     }
