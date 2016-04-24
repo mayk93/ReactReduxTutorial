@@ -4,8 +4,8 @@
 
 import React from 'react';
 
-const VideoListItems = (props) => {
-    return <li>Video</li>
+const VideoListItem = (props) => {
+    return <li>Video</li>;
 };
 
-export default VideoListItems;
+export default VideoListItem;
