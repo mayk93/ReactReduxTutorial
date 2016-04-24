@@ -10,6 +10,7 @@ import ReactDOM from 'react-dom';
 // Other Libs
 import YTSearch from 'youtube-api-search';
 import $ from 'jquery';
+import _ from 'lodash';
 
 // Components
 import SearchBar from './components/search_bar';
@@ -18,7 +19,10 @@ import VideoDetail from './components/video_detail';
 
 // Other Imports
 import API_KEYS from './other/other_info';
+
+// Consts
 const YT_API_KEY = API_KEYS.YT_KEY;
+const THROTTLE_AMMOUNT = 500;
 
     // Well, this is stupid - no conditional imports in JS.
 
@@ -99,10 +103,12 @@ class App extends Component {
     }
 
     render ()  {
+        const videoSearch = _.debounce((term) => { this.videoSearch(term)}, THROTTLE_AMMOUNT)
+
         return (
             <div>
                 <p>Location: { location }</p>
-                <SearchBar onSearchTermChange={term => this.videoSearch(term)}/>
+                <SearchBar onSearchTermChange={videoSearch}/>
                 <VideoDetail video={this.state.selectedVideo} />
                 <VideoList
                     onVideoSelect={selectedVideo => this.setState({selectedVideo})}
